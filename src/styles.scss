@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  @apply bg-gray-300 dark:bg-gray-950 text-black dark:text-white;
+}
+
+span,
+p {
+  @apply text-black dark:text-white;
+}
+
+.dark-bg {
+  @apply bg-gray-900 text-white dark:bg-gray-700;
+}

@@ -1,0 +1,43 @@
+input[type="email"],
+input[type="name"],
+input[type="password"],
+input[type="text"] {
+  @apply w-10/12 block;
+}
+
+input,
+.password_lable {
+  @apply py-1 sm:py-2 px-2 bg-gray-100 border  border-gray-300 text-gray-900 text-sm focus:ring-gray-500 focus:border-gray-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500;
+}
+
+.password_lable {
+  @apply w-auto;
+}
+
+input[type="email"],
+input[type="name"] {
+  @apply rounded-lg;
+}
+
+input[type="password"],
+input[type="text"] {
+  @apply rounded-l-lg;
+}
+
+form {
+  @apply flex  space-y-2 xl:space-y-4 pt-2  md:pt-4 flex-col items-center justify-center container h-auto;
+}
+
+div > span {
+  @apply w-1/2 block text-center p-3 text-lg font-semibold border border-gray-700;
+}
+
+.card {
+  @apply shadow-lg shadow-gray-400 border
+  border-gray-400 dark:border-gray-700  dark:shadow-gray-800
+  rounded-lg   justify-center items-center md:w-1/2  h-fit pb-3;
+}
+
+.password-red {
+  border: 1.5px solid rgb(200, 30, 30) !important;
+}

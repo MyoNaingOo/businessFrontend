@@ -1,0 +1,80 @@
+<div class="h-screen w-screen justify-center pt-2 sm:pt-4 md:pt-11 flex px-4">
+
+  <div
+    class="card">
+
+    <div class="flex flex-row">
+      <span [class]=" registerform? 'dark-bg rounded-tl-lg ' :' rounded-tl-lg'"
+        (click)="setRegisterForm(true)">Register</span>
+      <span [class]=" !registerform? 'dark-bg rounded-tr-lg' :' rounded-tr-lg'"
+        (click)="setRegisterForm(false)">Login</span>
+    </div>
+
+    <div class="flex justify-center items-center ">
+      @if (registerform) {
+
+      <form #f="ngForm" (submit)="register(f)"  >
+        <input type="name" name="name" #name="ngModel" placeholder="Enter Your Name" [ngModel]="user.name"  required />
+        <input type="email" name="gmail" #gmail="ngModel" placeholder="Enter Your Gmail" [ngModel]="user.gmail" autocomplete="username" required />
+
+        <div class="flex w-11/12 justify-center ">
+          <input [type]="showpassword ? 'text' :'password'"  placeholder="Enter Your Password" name="password" #password="ngModel"
+            [ngModel]="user.password" [(ngModel)]="my_password"  autocomplete="current-password" required
+             pattern="[a-z]" />
+          <label for="showpassword"
+            class="password_lable inline-flex items-center px-3  text-sm  rounded-s-0  rounded-e-md ">
+            <fa-icon [icon]="showpassword ? eye : eyeslash"></fa-icon>
+          </label>
+        </div>
+
+
+        <div class="flex w-11/12 justify-center ">
+          <input [type]="showpassword ? 'text' :'password'" name="confirmpassword" placeholder="Enter Your Confirm Password" #confirmpassword="ngModel"
+            [ngModel]="user.confirmpassword" [class]="my_password == my_confirmpassword ? '' : 'password-red'" [(ngModel)]="my_confirmpassword" autocomplete="current-password"  required />
+          <label for="showpassword"
+            class="password_lable inline-flex  items-center px-3  text-sm rounded-s-0 rounded-e-md">
+            <fa-icon [icon]="showpassword ? eye : eyeslash"></fa-icon>
+          </label>
+        </div>
+
+
+
+        <input type="checkbox" name="showpassword" class=" hidden " [(ngModel)]="showpassword" id="showpassword" />
+
+        <div class="flex w-10/12 items-start mb-6">
+          <div class="flex items-center h-5">
+            <input id="remember" type="checkbox" value=""
+              class="border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-gray-600 dark:ring-offset-gray-800"
+              required />
+          </div>
+
+          <label for="remember" class="ms-2 md:text-base text-sm  font-medium text-gray-900 dark:text-gray-300">I agree
+            with the
+            <a href="#" class="text-blue-600 hover:underline">terms and conditions</a>.</label>
+        </div>
+        <button type="submit" class="dark-bg rounded-md  w-10/12 sm:w-auto  px-5 py-2.5 text-center">Submit</button>
+
+      </form>
+    }
+    @else {
+      <form #f="ngForm" (submit)="login(f)" >
+        <input type="email" name="gmail" #gmail="ngModel" placeholder="Enter Your Gmail"   [ngModel]="user.gmail" autocomplete="username" required />
+
+        <div class="flex w-11/12 justify-center ">
+          <input [type]="showpassword ? 'text' :'password'" name="password" placeholder="Enter Your Password" #password="ngModel"
+            [ngModel]="user.password" autocomplete="current-password" required />
+          <label for="showpassword"
+            class="password_lable inline-flex items-center px-3  text-sm  rounded-s-0  rounded-e-md ">
+            <fa-icon [icon]="showpassword ? eye : eyeslash"></fa-icon>
+          </label>
+        </div>
+        <button type="submit" class="dark-bg rounded-md  w-10/12 sm:w-auto  px-5 py-2.5 text-center">Submit</button>
+
+      </form>
+
+    }
+    </div>
+
+
+  </div>
+</div>
