@@ -6,7 +6,7 @@
 
 body {
   overflow-x: hidden;
-  @apply bg-gray-300 dark:bg-gray-950 text-black dark:text-white;
+  @apply bg-gray-300 dark:bg-gray-900 text-black dark:text-white;
 }
 
 span,
@@ -16,4 +16,8 @@ p {
 
 .dark-bg {
   @apply bg-gray-900 text-white dark:bg-gray-700;
+}
+
+.bg-dark-light {
+  @apply bg-gray-100 dark:bg-gray-700;
 }

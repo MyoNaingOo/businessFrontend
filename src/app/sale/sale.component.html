@@ -1,7 +1,47 @@
-<div class="">
+<div class="flex-col md:flex-row flex flex-wrap  content-center">
+  <div
+    class="container-fluid flex-wrap w-8/12 p-1 my-3 shadow-blue-300 dark:shadow-blue-800 shadow-md flex items-center justify-center"
+  >
+    @for (item of items; track $index) {
 
+    <div class="card bg-dark-light">
+      <img src="./assets/image-1.jpg" alt="" />
+      <p class="text-sm">name</p>
+      <p class="text-sm">2000</p>
+    </div>
+    }
+  </div>
 
-  <div class="card bg-gray-600">
-    pp
+  <div class="w-4/12 h-96 border border-blue-800 border-solid my-3 p-1">
+    <div class="relative overflow-x-auto">
+      <table class="w-full py-4">
+        <thead class="text-sm uppercase dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-6 py-3">Product name</th>
+            <th scope="col" class="px-6 py-3">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Apple MacBook Pro 17"</th>
+            <td class="px-6 py-4">2999</td>
+          </tr>
+          <tr>
+            <th scope="row">Microsoft Surface Pro</th>
+            <td class="px-6 py-4">1999</td>
+          </tr>
+          <tr>
+            <th scope="row">Magic Mouse 2</th>
+            <td class="px-6 py-4">99</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">total</th>
+            <td class="px-6 py-4">990</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </div>
 </div>

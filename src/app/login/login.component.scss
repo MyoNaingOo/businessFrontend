@@ -7,7 +7,11 @@ input[type="text"] {
 
 input,
 .password_lable {
-  @apply py-1 sm:py-2 px-2 bg-gray-100 border  border-gray-300 text-gray-900 text-sm focus:ring-gray-500 focus:border-gray-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500;
+  @apply py-2 px-2 bg-gray-100 border
+   border-gray-300 text-gray-900 text-sm
+   focus:ring-gray-500 focus:border-gray-500
+   dark:bg-gray-700 dark:border-gray-600
+  dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-500 dark:focus:border-gray-500;
 }
 
 .password_lable {
@@ -35,7 +39,7 @@ div > span {
 .card {
   @apply shadow-lg shadow-gray-400 border
   border-gray-400 dark:border-gray-700  dark:shadow-gray-800
-  rounded-lg   justify-center items-center md:w-1/2  h-fit pb-3;
+  rounded-lg   justify-center items-center w-10/12 mt-20 md:w-1/2  h-fit pb-3;
 }
 
 .password-red {

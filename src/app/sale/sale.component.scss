@@ -1,3 +1,26 @@
 .card {
-  @apply w-1/12 h-32;
+  @apply h-36 m-2 w-[120px] container space-x-0
+  rounded-md justify-center items-center text-center flex-row shadow-md shadow-blue-300 dark:shadow-blue-800;
+}
+
+img {
+  @apply m-0 h-4/6 w-full rounded-t-md;
+}
+
+tbody th,
+td,
+tfoot th,
+td {
+  @apply text-sm ps-2 py-2 font-normal;
+}
+th {
+  @apply text-start;
+}
+
+tr {
+  @apply border-solid border-b border-gray-500;
+}
+
+td {
+  @apply text-end;
 }
